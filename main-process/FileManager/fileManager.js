@@ -15,8 +15,8 @@ const isFile = fileName => {
 
 ipcMain.handle("fetch-file-explorer", async (event, args) => {
 
-    //let directoryPath = args.directory || path.dirname( __dirname);
-    let directoryPath = args.directory || "C:\\wamp64\\www\\waves\\test"
+    let directoryPath = args.directory || path.dirname( __dirname);
+    //let directoryPath = args.directory || "C:\\wamp64\\www\\waves\\test"
   
     
     const files = fs.readdirSync(directoryPath)
